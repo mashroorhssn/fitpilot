@@ -185,14 +185,14 @@ As a **failover pool** for resilience: on a 429/quota error the backend rotates 
 **Why Gemini free tier at all?**
 The assignment constraint was zero budget. The architecture is model-agnostic — swapping tiers is a one-line env change (`GEMINI_MODEL_SMART=`...), and the token-discipline design (§1.8) exists precisely because of free-tier limits.
 
-**How do you stop hallucinated workouts?**
+**How do we stop hallucinated workouts?**
 The planner outputs only a split ID and a date→day-name mapping. Server code validates the ID against the database and attaches the real exercises/URLs. An invented split ID fails validation and the request errors loudly rather than saving garbage.
 
 ### 3.2 A real production issue we hit and fixed
 
 Our nightly email originally used Gmail SMTP via Nodemailer. It worked locally but **hung forever on Render** — because Render's free tier blocks outbound SMTP ports (25/465/587) since September 2025. Diagnosis: the request wasn't erroring, it was waiting on a TCP connection the host silently drops. Fix: switched to **Resend's HTTPS email API** (port 443 is never blocked), kept SMTP as a local-dev fallback with an 8-second timeout so it fails fast instead of hanging. This is a nice concrete example of environment-dependent failure and graceful-degradation design.
 
-### 3.3 Dependency pinning (if asked why versions are exact)
+### 3.3 Dependency pinning 
 
 `zod` is pinned to **3.23.8** and `@langchain/core` to **0.3.42** (with npm `overrides`). Newer zod (3.25+) ships dual v3/v4 type definitions that trigger a TypeScript type-instantiation explosion (`TS2589`) inside LangChain's `tool()` generics — compile memory blows past 3 GB. The pinned pair compiles cleanly and quickly. **Do not bump these two packages.**
 
@@ -264,7 +264,7 @@ Gemini keys are free at https://aistudio.google.com/apikey. With no other config
 
 ---
 
-## 7. Full deployment guide (beginner-friendly)
+## 7. Full deployment guide 
 
 Everything below is free and needs no credit card. Accounts required: **GitHub**, **Render** (sign up with GitHub), **Netlify** (sign up with GitHub), **Google AI Studio**, and — for the nightly email — **Resend** and **cron-job.org**.
 
