@@ -1,0 +1,46 @@
+{
+ "owner": {
+  "name": "Arif Hasan",
+  "occupation": "CS student + part-time frontend developer",
+  "location": "Dhaka, Bangladesh",
+  "note": "Workweek is Sunday-Thursday; Friday-Saturday is the weekend."
+ },
+ "weekly": {
+  "Sun": [
+   { "title": "Algorithms lecture", "start": "09:00", "end": "11:00", "type": "class" },
+   { "title": "Database systems lab", "start": "11:15", "end": "13:00", "type": "class" },
+   { "title": "Part-time dev shift (office)", "start": "14:30", "end": "18:30", "type": "work" }
+  ],
+  "Mon": [
+   { "title": "Software engineering lecture", "start": "10:00", "end": "12:00", "type": "class" },
+   { "title": "Sprint planning call", "start": "15:00", "end": "16:00", "type": "work" }
+  ],
+  "Tue": [
+   { "title": "Machine learning lecture", "start": "09:00", "end": "11:00", "type": "class" },
+   { "title": "Numerical methods lecture", "start": "11:15", "end": "13:00", "type": "class" },
+   { "title": "Part-time dev shift (remote)", "start": "15:00", "end": "19:00", "type": "work" }
+  ],
+  "Wed": [
+   { "title": "Compiler design lecture", "start": "11:00", "end": "13:00", "type": "class" },
+   { "title": "Study group - ML assignment", "start": "16:00", "end": "18:00", "type": "study" }
+  ],
+  "Thu": [
+   { "title": "Part-time dev shift (office, long day)", "start": "10:00", "end": "17:00", "type": "work" },
+   { "title": "Team retro", "start": "17:15", "end": "18:00", "type": "work" }
+  ],
+  "Fri": [
+   { "title": "Jummah prayers + lunch", "start": "12:30", "end": "14:00", "type": "personal" },
+   { "title": "Family dinner", "start": "19:30", "end": "21:00", "type": "personal" }
+  ],
+  "Sat": []
+ },
+ "altWeeks": {
+  "even": {
+   "Sat": [ { "title": "Family lunch at uncle's place", "start": "13:00", "end": "15:00", "type": "personal" } ]
+  },
+  "odd": {
+   "Sat": [ { "title": "Freelance sprint - client deadline", "start": "10:00", "end": "16:00", "type": "work" } ],
+   "Fri": [ { "title": "Client review call", "start": "10:00", "end": "11:00", "type": "work" } ]
+  }
+ }
+}
