@@ -30,9 +30,9 @@ export function rotateKey(): void {
 
 export const ENV = {
   PORT: Number(process.env.PORT || 8787),
-  MODEL_SMART: process.env.GEMINI_MODEL_SMART || "gemini-2.5-flash",
-  MODEL_FAST: process.env.GEMINI_MODEL_FAST || "gemini-2.5-flash-lite",
-  MODEL_VISION: process.env.GEMINI_MODEL_VISION || "gemini-2.5-flash",
+  MODEL_SMART: process.env.GEMINI_MODEL_SMART || "gemini-3-flash",
+  MODEL_FAST: process.env.GEMINI_MODEL_FAST || "gemini-3.1-flash-lite",
+  MODEL_VISION: process.env.GEMINI_MODEL_VISION || "gemini-3-flash",
   SUPABASE_URL: process.env.SUPABASE_URL || "",
   SUPABASE_KEY:
     process.env.SUPABASE_SERVICE_KEY || process.env.SUPABASE_ANON_KEY || "",
