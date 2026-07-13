@@ -9,8 +9,8 @@
 | Member | |
 |---|---|
 | K. M. Mashroor Hossain | GitHub: [@mashroorhssn](https://github.com/mashroorhssn) |
-| Naim Uddin Shuvo | |
-| Tahsina Jannat Noon | |
+| Naim Uddin Shuvo | | GitHub: [@naimdsaiki](https://github.com/naimdsaiki) |
+| Tahsina Jannat Noon | | GitHub: [@Tahsina-Jannat-Noon](https://github.com/Tahsina-Jannat-Noon) |
 
 ---
 
