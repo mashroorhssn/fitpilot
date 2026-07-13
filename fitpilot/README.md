@@ -48,7 +48,7 @@ The project is fully deployed (React/Vite on Netlify; Express/LangChain/TypeScri
                         ┌────────────────────────────────────────────┐
         React (Netlify) │  Express + LangChain (TypeScript, Render)  │
    Dashboard · Coach ───┤                                            │
-   Log · Meal scan      │   ORCHESTRATOR  (gemini-2.5-flash)         │
+   Log · Meal scan      │   ORCHESTRATOR  (gemini-3.5-flash)         │
    Progress · Settings  │   "agents as tools" — delegates to:        │
                         │                                            │
                         │   ├─ ScheduleAnalyst (flash-lite)          │
@@ -71,13 +71,13 @@ The project is fully deployed (React/Vite on Netlify; Express/LangChain/TypeScri
 
 | Agent | Model tier | Responsibility | Tools |
 |---|---|---|---|
-| **Orchestrator** | smart (`gemini-2.5-flash`) | Routes user requests; answers trivial questions directly; asks a clarifying question when the request is ambiguous | the 4 specialists (as tools) + `get_current_plan` |
-| **ScheduleAnalyst** | fast (`gemini-2.5-flash-lite`) | Fetches the weekly calendar via API and explains it for training purposes | `get_weekly_schedule` |
+| **Orchestrator** | smart (`gemini-3.5-flash`) | Routes user requests; answers trivial questions directly; asks a clarifying question when the request is ambiguous | the 4 specialists (as tools) + `get_current_plan` |
+| **ScheduleAnalyst** | fast (`gemini-3.5-flash-lite`) | Fetches the weekly calendar via API and explains it for training purposes | `get_weekly_schedule` |
 | **WorkoutPlanner** | smart | Selects a split *from the database* and maps its training days onto real free windows | `list_workout_splits`, `get_split_details`, `get_weekly_schedule`, `get_user_profile` |
 | **NutritionCoach** | smart | Turns computed daily targets into practical, affordable Dhaka-friendly meals | `calculate_nutrition_targets`, `get_user_profile`, `get_current_plan` |
 | **ProgressTracker** | fast | Reviews 14 days of logs vs. plan and goal; recommends concrete adjustments | `get_progress_data`, `get_current_plan`, `get_user_profile` |
 
-A separate **vision tier** (`gemini-2.5-flash` multimodal) powers meal-photo calorie estimation.
+A separate **vision tier** (`gemini-3.5-flash` multimodal) powers meal-photo calorie estimation.
 
 ### 1.3 One explainable agent loop
 
