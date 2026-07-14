@@ -144,7 +144,7 @@ Agents first see split *metadata* only and fetch full details for one chosen spl
 - **Frontend:** https://fitpilotgo.netlify.app/
 - **Backend health check:** https://fitpilot-api-5v1o.onrender.com/api/health
 
->  **Free-tier note:** Render puts idle free services to sleep. Open the health-check URL **2–3 minutes before presenting** — the first request after sleep takes ~30 s; everything after that is fast.
+>  **Free-tier note:** Render puts idle free services to sleep. Open the health-check URL **2–3 minutes before** — the first request after sleep takes ~30 s; everything after that is fast.
 
 ### 2.2 Demo flow 
 
